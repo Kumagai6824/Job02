@@ -2,34 +2,34 @@ public class Engine {
     //Field
     private final String carName; //車種名
     private final int cc; //排気量
-    private final EnType type; //enumより
+    private final EngineType type; //enumより
 
 
     //複数コンストラクターを設定することもできる
-    public Engine(String name,int cc, EnType type){
-        this.carName =name;
-        this.cc =cc;
-        this.type= type;
+    public Engine(String name, int cc, EngineType type) {
+        this.carName = name;
+        this.cc = cc;
+        this.type = type;
     }
 
     public String getCarName() {
-        return carName;
+        return this.carName;
     }
 
     public int getCc() {
-        return cc;
+        return this.cc;
     }
 
-    public String getType() {
-        return type.getType();
+    public EngineType getType() {
+        return this.type;
     }
 
-    public void dispName(){
-        System.out.println("["+ getCarName()+"]");
+    public void dispName() {
+        System.out.println("[" + getCarName() + "]");
     }
 
-    public void dispEngine(){
-        System.out.println("["+ getCarName()+"]"+"\r\n\sCC:"+ getCc()+"\r\n\sEngineType:"+getType());
+    public void dispEngine() {
+        System.out.println("[" + getCarName() + "]" + "\r\n\sCC:" + getCc() + "\r\n\sEngineType:" + getType());
 
     }
 }
